@@ -6,6 +6,7 @@ import * as yup from "yup";
 
 import { Container, LoginContainer, Column, Spacing, Title } from "./styles";
 import { defaultValues, IFormLogin } from "./types";
+import { useEffect, useState } from "react";
 
 const schema = yup
   .object({
@@ -28,6 +29,11 @@ const Login = () => {
     reValidateMode: "onChange",
   });
 
+  const [valid, setValid] = useState(false);
+  useEffect(() => {
+    setValid(isValid);
+  }, [isValid]);
+
   return (
     <Container>
       <LoginContainer>
@@ -49,7 +55,11 @@ const Login = () => {
             errorMessage={errors?.password?.message}
           />
           <Spacing />
-          <Button title="Entrar" />
+          <Button
+            title="Entrar"
+            isValid={!valid}
+            onClick={() => alert("Login realizado!")}
+          />
         </Column>
       </LoginContainer>
     </Container>
