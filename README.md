@@ -9,7 +9,7 @@
   <p> Objetivo: Criar uma tela de login com validação. </p>
 <h3>▶ Como rodar:</h3>
 <div>
-    <p>Você pode acessar <a href="#">clicando aqui</a>.</p>
+    <p>Você pode acessar <a href="https://login-dio-snowy.vercel.app/">clicando aqui</a>.</p>
 </div>
   <h3>💻 TECNOLOGIA:</h3>
   <img  alt="React" width="40" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg">
